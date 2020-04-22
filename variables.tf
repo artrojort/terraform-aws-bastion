@@ -1,5 +1,5 @@
 variable "project_tag" {
-  description = "Public subnet ID where bastion will be launched."
+  description = "EC2 Tag to identify the project where bastion will be used. "
 }
 
 variable "region" {
@@ -19,12 +19,12 @@ variable "allowed_hosts" {
 }
 
 variable "instance_type" {
-  description = "Instance type"
+  description = "Instance type for bastion server"
   default     = "t2.micro"
 }
 
 variable "disk_size" {
-  description = "The size of the root volume in gigabytes."
+  description = "Root volume size in GB for bastion server."
   default     = 10
 }
 
