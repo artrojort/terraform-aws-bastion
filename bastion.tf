@@ -22,13 +22,16 @@ resource "aws_instance" "server" {
 }
 
 output "public_ip" {
-  value = aws_instance.server.public_ip
+  value       = aws_instance.server.public_ip
+  description = "Bastion's public ip"
 }
 
 output "private_ip" {
-  value = aws_instance.server.private_ip
+  value       = aws_instance.server.private_ip
+  description = "Bastion's private ip"
 }
 
 output "instance_id" {
-  value = aws_instance.server.id
+  value       = aws_instance.server.id
+  description = "Bastions's instance id"
 }

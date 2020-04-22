@@ -35,20 +35,16 @@ variable "internal_networks" {
 
 data "aws_ami" "amazon_linux" {
   most_recent = true
+  owners = ["amazon"]
 
   filter {
-    name   = "image-id"
-    values = ["ami-0d6621c01e8c2de2c"]
+    name   = "name"
+    values = ["amzn2-ami-hvm-2.0.20200406.0-x86_64-gp2"]
   }
 
   filter {
     name   = "architecture"
     values = ["x86_64"]
-  }
-  
-  filter {
-    name   = "owner-id"
-    values = ["137112412989"]
   }
 
 }
